@@ -55,11 +55,13 @@ body {
     border-top-left-radius: 10px;
     border-bottom-right-radius: 20px;
 }
-/*  */
+/* Set all examples to grid */
 .container :is(#example1, 
-#example2, #example3, #example4, 
-#example5, #example6) {
+#example2, #example3, 
+#example4, #example5) {
     display: grid;
+    container-name: toFlex;
+    container-type: flex;
 }
 /* Example 1 */
 /* #example1 {
@@ -104,3 +106,15 @@ grid-row: line-start / line-end
     /* This particular element took up 
     the entire row. */
 }
+/* Media query */
+@media screen and (width < 900px) {
+    .container {
+        width: 100%;
+    }
+}
+/* 
+@container query is not yet support on google chrome
+@container toFlex (min-width: 900px)  {
+    flex-flow: column wrap;
+    align-items: center;
+} */
