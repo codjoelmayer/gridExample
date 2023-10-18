@@ -75,51 +75,32 @@ body {
 }
 /* Example 4
 Please compare the size on the columns
-to see the difference between 1fr 2fr and 3fr
+to see the difference between 1fr and 3fr
 */
 #example4 {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(2, 1fr);
 }
 /* Example 5: 
+Let's create 3 columns
+I want the first child of item to 
+span from line 1 to the last line 
+and check what will happen.
+To span a column: use grid-column or 
+grid-template-areas: to define the area as a string it need to be defined on the parent.
+
+to use it on the child make use of grid-area: 'area'
+
+grid-column: line-start/line-end
+grid-row: line-start / line-end
  */
 #example5 {
-
+    grid-template-columns: repeat(3, 1fr);
 }
-/* Example 6: 
- */
- #example6 {
-
- }
-/* Example 7: 
- */
- #example7 {
-
- }
-/* Example 8: 
- */
- #example8 {
-
- }
-/* Example 9: 
- */
- #example9 {
-
- }
-/* Example 10: 
- */
- #example10 {
-
- }
-/* Example 11: 
- */
- #example11 {
-
- }
-/* Example 12: 
- */
- #example12 {
-
- }
-
-  
+#example5 .item:nth-child(1) {
+    /* or 1 / 4 */
+    grid-column: 1 / -1;
+    margin-inline: auto;
+    /* This particular element took up 
+    the entire row. */
+}
