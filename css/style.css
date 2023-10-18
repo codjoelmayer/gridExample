@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* rgb: red, green blue */
+    --primary: rgb(0, 0, 0);
+    /* hsl: hue degree of from 0 to 360deg
+    0: red, 120: green, 240 is blue, 
+    saturation: percentage of gray 
+    lightness: 0 is black, 50% gray; 100% is white */
+    --secondary: hsl(0, 0%, 100%);
+    --alternative: rgba(107, 72, 72, 0.8);
+    --awesomeColor: darkolivegreen;
+}
+body {
+    text-align: center;
+}
+.container {
+    width: 900px;
+    /* margin-top and bottom */
+    margin-block: 12px;
+    /* margin-inline: left and right */
+    margin-inline: auto;
+    /* 
+    border-width , border-style, border-color
+    */
+    border: 5px solid;    
+    background-color: var(--alternative);
+    position: relative;
+}
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-image: linear-gradient(to right, green, yellow);
+}
+.container :is(h2) {
+    background-color: var(--alternative);
+    color: var(--secondary);
+}
+.item {
+    width: 4rem;
+}
+/* img should fit without overlapping item because it a parent.  */
+.item > img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 20px;
+}
+/*  */
+.container :is(#example1, 
+#example2, #example3, #example4, 
+#example5, #example6) {
+    display: grid;
+}
+/* Example 1 */
+/* #example1 {
+    display: grid;
+} */
+/* Example 2 */
+#example2 {
+    grid-template-columns: repeat(3, 1fr);
+}
+/* Example 3 */
+#example3 {
+    grid-template-rows: repeat(3, 1fr);
+}
+/* Example 4
+Please compare the size on the columns
+to see the difference between 1fr 2fr and 3fr
+*/
+#example4 {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+/* Example 5: 
+ */
+#example5 {
+
+}
+/* Example 6: 
+ */
+ #example6 {
+
+ }
+/* Example 7: 
+ */
+ #example7 {
+
+ }
+/* Example 8: 
+ */
+ #example8 {
+
+ }
+/* Example 9: 
+ */
+ #example9 {
+
+ }
+/* Example 10: 
+ */
+ #example10 {
+
+ }
+/* Example 11: 
+ */
+ #example11 {
+
+ }
+/* Example 12: 
+ */
+ #example12 {
+
+ }
+
+  
