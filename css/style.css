@@ -48,7 +48,7 @@ body {
 .item {
     width: 4rem;
 }
-/* img should fit without overlapping item because it a parent.  */
+/* img should fit without overlapping item class  */
 .item > img{
     width: 100%;
     aspect-ratio: 1/1;
@@ -60,8 +60,6 @@ body {
 #example2, #example3, 
 #example4, #example5) {
     display: grid;
-    container-name: toFlex;
-    container-type: flex;
 }
 /* Example 1 */
 /* #example1 {
